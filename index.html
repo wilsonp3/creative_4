@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Write Your Story</title>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+  </head>
+  <body>
+      <h1>Write Your Story</h1>
+      <nav>
+          <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/definitions.html">Story Guide</a></li>
+          </ul>
+      </nav>
+
+
+      <div id="app">
+
+          <div class="intro">
+              <p class="intro_text">Use the following template to create your very
+                  own story outline. Fill in the blanks to create
+                  your story's setting, characters, and events.
+                  Your outline will appear at the bottom of the
+                  page. Hover your mouse over the text above a
+                  box for a few seconds to see an explanation of
+                  what you can put into the boxes. When you are
+                  done filling in the boxes, copy your outline
+                  to use as a guide as you write the whole story.
+                  Refresh the page if you want to start over.
+                  (For mobile devices, go to the "Story Guide"
+                  page to see the definitions you wouldn't be able
+                  to see through hovering.)
+              </p>
+          </div>
+
+
+          <div class="boxes">
+              <span v-bind:title="genre_def">
+                  <h2>Genre:</h2>
+              </span>
+              <textarea  v-model="genre_message"></textarea>
+
+
+
+              <span v-bind:title="setting_def">
+                  <h2>Setting:</h2>
+              </span>
+              <textarea v-model="setting_message"></textarea>
+
+
+
+              <span v-bind:title="main_character_def">
+                  <h2>Main Character's Name:</h2>
+              </span>
+
+              <textarea v-model="main_character_name"></textarea>
+
+
+              <span v-bind:title="char_description_def">
+                  <h2>Main Character's Description:</h2>
+              </span>
+
+              <textarea v-model="text_char_description"></textarea>
+
+
+
+
+              <span v-bind:title="conflict_def">
+                  <h2>Main Conflict:</h2>
+              </span>
+              <textarea v-model="main_conflict_description"></textarea>
+
+
+
+
+              <span v-bind:title="theme_def">
+                  <h2>Theme:</h2>
+              </span>
+              <textarea v-model="theme_message"></textarea>
+
+
+
+              <span v-bind:title="other_char_def">
+                  <h2>Other Characters:</h2>
+              </span>
+              <textarea v-model="other_char_description"></textarea>
+
+
+
+
+
+              <span v-bind:title="parts_def">
+                  <h2>The Story's 3 Parts:</h2>
+              </span>
+
+
+
+              <span v-bind:title="beginning_def">
+                  <h3>The Beginning:</h3>
+              </span>
+              <textarea v-model="beginning_message"></textarea>
+
+
+              <span v-bind:title="middle_def">
+                  <h3>The Middle:</h3>
+              </span>
+              <textarea v-model="middle_message"></textarea>
+
+
+
+              <span v-bind:title="ending_def">
+                  <h3>The Ending:</h3>
+              </span>
+              <textarea v-model="ending_message"></textarea>
+          </div>
+
+
+
+          <div class="writer_text">
+              <h2>Your Outline:</h2>
+
+              <p>{{genre_message}}</p>
+
+              <p>{{setting_message}}</p>
+
+              <p>The name of the main character is {{main_character_name}}</p>
+
+              <p>The Main Character's Description:</p>
+
+              <p>{{text_char_description}}</p>
+
+
+              <h4>The Main Conflict:</h4>
+              <p>{{main_conflict_description}}</p>
+
+
+              <h4>The Theme:</h4>
+              <p>{{theme_message}}</p>
+
+              <h4>Other Characters:</h4>
+              <p>{{other_char_description}}</p>
+
+
+              <h4>The Beginning:</h4>
+              <p>{{beginning_message}}</p>
+
+              <h4>The Middle:</h4>
+              <p>{{middle_message}}</p>
+
+              <h4>The Ending:</h4>
+              <p>{{ending_message}}</p>
+          </div>
+      </div>
+
+
+      <footer>
+          <a id="footer_content" href="https://github.com/wilsonp3/creative_4">
+          GitHub</a>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+      <script text="type/javascript" src="/assets/js/script.js"></script>
+
+  </body>
+</html>

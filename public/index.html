@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Write Your Story</title>
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+  </head>
+  <body>
+      <h1>Write Your Story</h1>
+      <nav>
+          <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/definitions.html">Story Guide</a></li>
+          </ul>
+      </nav>
+
+
+      <div id="app">
+
+          <div class="intro">
+              <p class="intro_text">Use the following template to create your very
+                  own story outline. Fill in the blanks to create
+                  your story's setting, characters, and events.
+                  Your outline will appear at the bottom of the
+                  page. Hover your mouse over the text above a
+                  box for a few seconds to see an explanation of
+                  what you can put into the boxes. When you are
+                  done filling in the boxes, copy your outline
+                  to use as a guide as you write the whole story.
+                  Refresh the page if you want to start over.
+                  (For mobile devices, go to the "Story Guide"
+                  page to see the definitions you wouldn't be able
+                  to see through hovering.)
+              </p>
+          </div>
+
+
+          <div class="boxes">
+
+              <span>
+                  <h2>Genre:</h2>
+              </span>
+
+              <form v-on:submit.prevent="enter_genre">
+            	<input type="text" v-model="new_genre">
+            	<button type="submit">Enter Genre</button>
+              </form>
+
+
+              <p>{{ genre }}</p>
+
+
+
+              <span>
+                  <h2>Setting:</h2>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Enter Setting</button>
+
+
+
+
+              <span >
+                  <h2>Main Character's Name:</h2>
+              </span>
+              <textarea v-model="main_character_name"></textarea>
+              <button type="submit">Enter Name</button>
+
+
+              <span>
+                  <h2>Main Character's Description:</h2>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Enter Description</button>
+
+
+
+
+              <span>
+                  <h2>Main Conflict:</h2>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Enter Conflict</button>
+
+
+
+
+              <span>
+                  <h2>Theme:</h2>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Add Theme</button>
+
+
+
+              <span>
+                  <h2>Other Characters:</h2>
+              </span>
+
+              <form v-on:submit.prevent="add_other_char">
+                  <input type="text" v-model="other_char_name" placeholder="Enter Character Name"/>
+                  <textarea v-model="other_char_profile" placeholder="Enter Character Profile"/>
+                  <button type="submit">Add Character</button>
+              </form>
+
+
+              <ul>
+                  <li>
+                    <label>temp value</label><button v-on:click="" class="delete">X</button>
+                </li>
+              </ul>
+
+
+
+
+
+
+            <h2>The Story's 3 Parts:</h2>
+
+
+
+
+
+            <h3>The Beginning:</h3>
+
+              <textarea ></textarea>
+              <button type="submit">Enter Beginning</button>
+
+
+              <span>
+                  <h3>The Middle:</h3>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Enter Middle</button>
+
+
+
+              <span>
+                  <h3>The Ending:</h3>
+              </span>
+              <textarea ></textarea>
+              <button type="submit">Enter Ending</button>
+          </div>
+
+
+
+          <div class="writer_text">
+              <h2>Your Outline:</h2>
+
+              <p>{{}}</p>
+
+              <p>{{}}</p>
+
+              <p>The name of the main character is {{main_character_name}}</p>
+
+              <p>The Main Character's Description:</p>
+
+              <p>{{}}</p>
+
+
+              <h4>The Main Conflict:</h4>
+              <p>{{}}</p>
+
+
+              <h4>The Theme:</h4>
+              <p>{{}}</p>
+
+              <h4>Other Characters:</h4>
+              <p>{{}}</p>
+
+
+              <h4>The Beginning:</h4>
+              <p>{{}}</p>
+
+              <h4>The Middle:</h4>
+              <p>{{}}</p>
+
+              <h4>The Ending:</h4>
+              <p>{{}}</p>
+          </div>
+      </div>
+
+
+      <footer>
+          <a id="footer_content" href="https://github.com/wilsonp3/creative_4">
+          GitHub</a>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+      <script text="type/javascript" src="/script.js"></script>
+
+  </body>
+</html>

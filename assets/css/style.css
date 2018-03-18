@@ -1,0 +1,159 @@
+html {
+  height: 100%;
+}
+
+body {
+    background-color: rgb(180,200,255);
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+    font-family: fantasy;
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+    padding-left: 5%;
+
+}
+
+h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-style: oblique;
+    color: black;
+    text-decoration:underline;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-size: 25px;
+    color: black;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.main_content {
+    padding-bottom: 150px;
+}
+
+.def_box {
+    background-color: white;
+    padding: 5%;
+    margin: 5%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(0,100,255);
+  height: 100px;
+  width: 100%;
+  padding-top: 10px;
+  text-decoration-color: white;
+  font-family: sans-serif;
+  font-style: oblique;
+  text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,100,255);
+    padding-left: 5%;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+nav li a:hover {
+    background-color: rgb(0,0,200);
+}
+
+#footer_content {
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: fantasy;
+    text-decoration: none;
+}
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    font-size: 17px;
+}
+
+.textarea {
+    text-align:left;
+}
+
+#main {
+    text-align: left;
+    padding-bottom: 150px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.intro {
+    padding: 5%;
+    background-color: white;
+    margin: 5%;
+}
+
+.intro_text {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+
+.definitions_content {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 150px;
+}
+
+
+.boxes {
+    padding: 5%;
+    margin: 5%;
+    background-color: white;
+}
+
+.writer_text {
+    background-color: white;
+    padding: 5%;
+    margin: 5%;
+}
