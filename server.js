@@ -19,7 +19,7 @@ let middle = '';
 let ending = '';
 
 
-//Use the following code for your other_char method
+//Genre
 app.get('/api/genre', function (request,response) {
     response.send(genre);
 });
@@ -28,6 +28,92 @@ app.post('/api/genre', function (request, response) {
     let genre = request.body.genre;
     response.send(genre);
 });
+
+//Setting
+app.get('/api/setting', function (request,response) {
+    response.send(setting);
+});
+
+app.post('/api/setting', function (request, response) {
+    let setting = request.body.setting;
+    response.send(setting);
+});
+
+//Main Character Name
+app.get('/api/main_character_name', function (request,response) {
+    response.send(main_character_name);
+});
+
+app.post('/api/main_character_name', function (request, response) {
+    let main_character_name = request.body.main_character_name;
+    response.send(main_character_name);
+});
+
+//Main Character Description
+app.get('/api/main_character_description', function (request,response) {
+    response.send(main_character_description);
+});
+
+app.post('/api/main_character_description', function (request, response) {
+    let main_character_description = request.body.main_character_description;
+    response.send(main_character_description);
+});
+
+//Main Conflict
+app.get('/api/main_conflict', function (request,response) {
+    response.send(main_conflict);
+});
+
+app.post('/api/main_conflict', function (request, response) {
+    let main_conflict = request.body.main_conflict;
+    response.send(main_conflict);
+});
+
+//Theme
+app.get('/api/theme', function (request,response) {
+    response.send(theme);
+});
+
+app.post('/api/theme', function (request, response) {
+    let theme = request.body.theme;
+    response.send(theme);
+});
+
+//Beginning
+app.get('/api/beginning', function (request,response) {
+    response.send(beginning);
+});
+
+app.post('/api/beginning', function (request, response) {
+    let beginning = request.body.beginning;
+    response.send(beginning);
+});
+
+//Middle
+app.get('/api/middle', function (request,response) {
+    response.send(middle);
+});
+
+app.post('/api/middle', function (request, response) {
+    let middle = request.body.middle;
+    response.send(middle);
+});
+
+//Ending
+app.get('/api/ending', function (request,response) {
+    response.send(ending);
+});
+
+app.post('/api/ending', function (request, response) {
+    let ending = request.body.ending;
+    response.send(ending);
+});
+
+
+
+
+//Use the following code for your other_char method
+
 
 app.get('/api/other-char', function (request, response) {
   response.send(other_char);

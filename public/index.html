@@ -17,19 +17,16 @@
       <div id="app">
 
           <div class="intro">
-              <p class="intro_text">Use the following template to create your very
+              <p class="intro_text">Use the following template to
+                  create your very
                   own story outline. Fill in the blanks to create
                   your story's setting, characters, and events.
                   Your outline will appear at the bottom of the
-                  page. Hover your mouse over the text above a
-                  box for a few seconds to see an explanation of
-                  what you can put into the boxes. When you are
+                  page. When you are
                   done filling in the boxes, copy your outline
                   to use as a guide as you write the whole story.
-                  Refresh the page if you want to start over.
-                  (For mobile devices, go to the "Story Guide"
-                  page to see the definitions you wouldn't be able
-                  to see through hovering.)
+                  See the "Story Guide" Page to read explanations
+                  for the terms you fill in.
               </p>
           </div>
 
@@ -53,92 +50,110 @@
               <span>
                   <h2>Setting:</h2>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Enter Setting</button>
 
+              <form v-on:submit.prevent="enter_setting">
+            	<input type="text" v-model="new_setting">
+            	<button type="submit">Enter Setting</button>
+              </form>
+
+
+              <p>{{ setting }}</p>
 
 
 
               <span >
                   <h2>Main Character's Name:</h2>
               </span>
-              <textarea v-model="main_character_name"></textarea>
-              <button type="submit">Enter Name</button>
+
+              <form v-on:submit.prevent="enter_main_character_name">
+            	<input type="text" v-model="new_main_character_name">
+            	<button type="submit">Enter Name</button>
+              </form>
+
+
+              <p>{{ main_character_name }}</p>
 
 
               <span>
                   <h2>Main Character's Description:</h2>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Enter Description</button>
 
+              <form v-on:submit.prevent="enter_main_character_description">
+            	<input type="text" v-model="new_main_character_description">
+            	<button type="submit">Enter Description</button>
+              </form>
+
+              <p>{{ main_character_description }}</p>
 
 
 
               <span>
                   <h2>Main Conflict:</h2>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Enter Conflict</button>
 
+              <form v-on:submit.prevent="enter_main_conflict">
+            	<input type="text" v-model="new_main_conflict">
+            	<button type="submit">Enter Conflict</button>
+              </form>
 
+              <p>{{ main_conflict }}</p>
 
 
               <span>
                   <h2>Theme:</h2>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Add Theme</button>
-
-
-
-              <span>
-                  <h2>Other Characters:</h2>
-              </span>
-
-              <form v-on:submit.prevent="add_other_char">
-                  <input type="text" v-model="other_char_name" placeholder="Enter Character Name"/>
-                  <textarea v-model="other_char_profile" placeholder="Enter Character Profile"/>
-                  <button type="submit">Add Character</button>
+              <form v-on:submit.prevent="enter_theme">
+            	<input type="text" v-model="new_theme">
+            	<button type="submit">Enter Theme</button>
               </form>
 
-
-              <ul>
-                  <li>
-                    <label>temp value</label><button v-on:click="" class="delete">X</button>
-                </li>
-              </ul>
+              <p>{{ theme }}</p>
 
 
 
+
+            <h2>Other Characters:</h2>
 
 
 
             <h2>The Story's 3 Parts:</h2>
 
 
-
-
-
             <h3>The Beginning:</h3>
 
-              <textarea ></textarea>
-              <button type="submit">Enter Beginning</button>
+
+              <form v-on:submit.prevent="enter_beginning">
+            	<input type="text" v-model="new_beginning">
+            	<button type="submit">Enter Begining</button>
+              </form>
+
+              <p>{{ beginning }}</p>
 
 
               <span>
                   <h3>The Middle:</h3>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Enter Middle</button>
+
+              <form v-on:submit.prevent="enter_middle">
+                <input type="text" v-model="new_middle">
+                <button type="submit">Enter Middle</button>
+              </form>
+
+              <p> {{ middle }} </p>
 
 
 
               <span>
                   <h3>The Ending:</h3>
               </span>
-              <textarea ></textarea>
-              <button type="submit">Enter Ending</button>
+
+              <form v-on:submit.prevent="enter_ending">
+                <input type="text" v-model="new_ending">
+                <button type="submit">Enter Ending</button>
+              </form>
+
+              <p> {{ ending }} </p>
+
           </div>
 
 
@@ -146,36 +161,36 @@
           <div class="writer_text">
               <h2>Your Outline:</h2>
 
-              <p>{{}}</p>
+              <p>The genre of the story is {{ genre }}</p>
 
-              <p>{{}}</p>
+              <p>The setting of the story is {{ setting }}</p>
 
               <p>The name of the main character is {{main_character_name}}</p>
 
               <p>The Main Character's Description:</p>
 
-              <p>{{}}</p>
+              <p>{{ main_character_description }}</p>
 
 
               <h4>The Main Conflict:</h4>
-              <p>{{}}</p>
+              <p>{{ main_conflict }}</p>
 
 
               <h4>The Theme:</h4>
-              <p>{{}}</p>
+              <p>{{ theme }}</p>
 
               <h4>Other Characters:</h4>
               <p>{{}}</p>
 
 
               <h4>The Beginning:</h4>
-              <p>{{}}</p>
+              <p>{{ beginning }}</p>
 
               <h4>The Middle:</h4>
-              <p>{{}}</p>
+              <p>{{ middle }}</p>
 
               <h4>The Ending:</h4>
-              <p>{{}}</p>
+              <p>{{ ending }}</p>
           </div>
       </div>
 
