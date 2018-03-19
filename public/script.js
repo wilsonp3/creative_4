@@ -206,7 +206,7 @@ var app = new Vue({
         //Ending
         get_ending: function() {
             axios.get("/api/ending").then(response => {
-                this.middle = response.data;
+                this.ending = response.data;
                 return true;
             }).catch(err => {});
         },

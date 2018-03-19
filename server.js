@@ -25,8 +25,13 @@ app.get('/api/genre', function (request,response) {
 });
 
 app.post('/api/genre', function (request, response) {
-    let genre = request.body.genre;
+    genre = request.body.genre;
     response.send(genre);
+});
+
+app.put('/api/genre', (request, response) => {
+    genre = request.body.genre;
+    res.send(item);
 });
 
 //Setting
@@ -35,7 +40,7 @@ app.get('/api/setting', function (request,response) {
 });
 
 app.post('/api/setting', function (request, response) {
-    let setting = request.body.setting;
+    setting = request.body.setting;
     response.send(setting);
 });
 
@@ -45,7 +50,7 @@ app.get('/api/main_character_name', function (request,response) {
 });
 
 app.post('/api/main_character_name', function (request, response) {
-    let main_character_name = request.body.main_character_name;
+    main_character_name = request.body.main_character_name;
     response.send(main_character_name);
 });
 
@@ -55,7 +60,7 @@ app.get('/api/main_character_description', function (request,response) {
 });
 
 app.post('/api/main_character_description', function (request, response) {
-    let main_character_description = request.body.main_character_description;
+    main_character_description = request.body.main_character_description;
     response.send(main_character_description);
 });
 
@@ -65,7 +70,7 @@ app.get('/api/main_conflict', function (request,response) {
 });
 
 app.post('/api/main_conflict', function (request, response) {
-    let main_conflict = request.body.main_conflict;
+    main_conflict = request.body.main_conflict;
     response.send(main_conflict);
 });
 
@@ -75,7 +80,7 @@ app.get('/api/theme', function (request,response) {
 });
 
 app.post('/api/theme', function (request, response) {
-    let theme = request.body.theme;
+    theme = request.body.theme;
     response.send(theme);
 });
 
@@ -85,7 +90,7 @@ app.get('/api/beginning', function (request,response) {
 });
 
 app.post('/api/beginning', function (request, response) {
-    let beginning = request.body.beginning;
+    beginning = request.body.beginning;
     response.send(beginning);
 });
 
@@ -95,7 +100,7 @@ app.get('/api/middle', function (request,response) {
 });
 
 app.post('/api/middle', function (request, response) {
-    let middle = request.body.middle;
+    middle = request.body.middle;
     response.send(middle);
 });
 
@@ -105,7 +110,7 @@ app.get('/api/ending', function (request,response) {
 });
 
 app.post('/api/ending', function (request, response) {
-    let ending = request.body.ending;
+    ending = request.body.ending;
     response.send(ending);
 });
 
